@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+        <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
             <a className='navbar-brand' href='https://github.com/CryptoFutureX'>
                 CryptoFutureX
             </a>
@@ -25,7 +25,12 @@ const Navbar = () => {
                             Home <span className='sr-only'>(current)</span>
                         </a>
                     </li>
-                    <li className='nav-item dropdown'>
+                    <li className='nav-item active'>
+                        <a className='nav-link' href='/about'>
+                            About <span className='sr-only'>(current)</span>
+                        </a>
+                    </li>
+                    {/* <li className='nav-item dropdown'>
                         <a
                             className='nav-link dropdown-toggle'
                             href='/'
@@ -52,9 +57,9 @@ const Navbar = () => {
                                 Something else here
                             </a>
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
-                <form className='form-inline my-2 my-lg-0'>
+                {/* <form className='form-inline my-2 my-lg-0'>
                     <input
                         className='form-control mr-sm-2'
                         type='search'
@@ -67,7 +72,7 @@ const Navbar = () => {
                     >
                         Search
                     </button>
-                </form>
+                </form> */}
             </div>
         </nav>
     );

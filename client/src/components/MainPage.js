@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './MainPage.css';
 import Chart from 'react-apexcharts';
+
+import './MainPage.css';
+
 import options from './options';
 import series from './sampleData';
 import Menu from './Menu';

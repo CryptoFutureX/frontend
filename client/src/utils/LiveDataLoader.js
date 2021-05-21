@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import CoinLayer from '../api/CoinLayer'
+
+import CoinLayer from '../api/CoinLayer';
+import API_KEY from '../key';
 
 const LiveDataLoader = () => {
     const [data,setData] = useState(null)
@@ -8,14 +10,14 @@ const LiveDataLoader = () => {
         const fetchData = async () => {
             const x = await CoinLayer.get('/live',{
                 params:{
-                    access_key:'07841d9d56dfeb8caddc8d5b853ed7cc',
+                    access_key: API_KEY,
                     target:'INR'
                 }
             })
 
             const y = await CoinLayer.get('/live',{
                 params:{
-                    access_key:'07841d9d56dfeb8caddc8d5b853ed7cc',
+                    access_key: API_KEY,
                     target:'USD'
                 }
             })

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+
 import CoinLayer from '../api/CoinLayer';
+import API_KEY from '../key';
 
 const TimeFrameData = () => {
     const [data, setData] = useState(null);
@@ -8,7 +10,7 @@ const TimeFrameData = () => {
         const fetchData = async () => {
             const x = await CoinLayer.get('/timeframe', {
                 params: {
-                    access_key: '07841d9d56dfeb8caddc8d5b853ed7cc',
+                    access_key: API_KEY,
                     target: 'INR',
                     symbols: 'BTC,ETH',
                     start_date:'2018-04-01',

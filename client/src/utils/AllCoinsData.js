@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
+
 import CoinLayer from '../api/CoinLayer';
+import API_KEY from '../key';
+
 
 const AllCoinsData = () => {
     const [data, setData] = useState(null);
@@ -8,7 +11,7 @@ const AllCoinsData = () => {
         const fetchData = async () => {
             const x = await CoinLayer.get('/list', {
                 params: {
-                    access_key: '07841d9d56dfeb8caddc8d5b853ed7cc',
+                    access_key: API_KEY,
                     target: 'INR',
                 },
             });
