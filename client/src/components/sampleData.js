@@ -1,7 +1,7 @@
 const dateTime = (x) => {
     var y = new Date(x);
     y = `${y}`;
-    console.log(y.slice(0, 15));
+    // console.log(y.slice(0, 15));
     return y.slice(0, 15);
 };
 

@@ -2,10 +2,10 @@ import React from 'react';
 
 const Menu = ({ selected, list, changeSelectedCoin, name }) => {
     return (
-        <div class='dropdown2'>
+        <div className='dropdown2'>
             <p className='name'>{name} : </p>
             <button
-                class='btn btn-secondary dropdown-toggle'
+                className='btn btn-secondary dropdown-toggle'
                 type='button'
                 id='dropdownMenuButton'
                 data-toggle='dropdown'
@@ -14,14 +14,15 @@ const Menu = ({ selected, list, changeSelectedCoin, name }) => {
             >
                 {selected[name]}
             </button>
-            <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+            <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
                 {list.map((coin) => {
                     return (
                         <button
                             onClick={changeSelectedCoin}
-                            class='dropdown-item'
+                            className='dropdown-item'
                             name={name}
                             value={coin}
+                            key={coin}
                         >
                             {coin}
                         </button>
